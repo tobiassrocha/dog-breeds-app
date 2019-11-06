@@ -1,0 +1,239 @@
+@import "variables.less";
+
+/* CONTENT ///////////////////////////////////////////////// */
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+
+    &-left {
+        position: relative;
+        width: 65%;
+    }
+    &-right {
+        box-sizing: border-box;
+        padding: 60px 20px 0 60px;
+        width: 30%;
+
+        &-title {
+            border-bottom: 2px solid;
+            color: @color-six;
+            font-size: 20px;
+            font-weight: normal;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+        }
+    }
+    .section {
+        background: @color-two;
+        border: 1px solid @color-six;
+        -webkit-box-shadow: 0px 0px 10px 0px @color-three;
+        -moz-box-shadow: 0px 0px 10px 0px @color-three;
+        box-shadow: 0px 0px 5px 0px @color-six;
+        border-radius: 10px;
+    }
+    .form {
+        display: flex;
+        justify-content: space-between;
+        margin: 60px auto 0;
+        width: 90%;
+        
+        &-title {
+            font-size: 25px;
+            text-align: center;
+        }
+        &-content {
+            width: 50%;
+        }
+        &-group {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 30px;
+            position: relative;
+
+            .icon-arrow {
+                background-image: url(../images/arrow-down.png);
+                background-size: 100%;
+                position: absolute;
+                bottom: 18px;
+                right: 20px;
+                width: 20px;
+                height: 20px;
+            }
+        }
+        &-select {
+            background: transparent;
+            border: 2px solid @color-one;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-family: inherit;
+            font-size: 20px;
+            outline: none;
+            padding: 15px 10px;
+            text-transform: capitalize;
+            width: 100%;
+            -webkit-appearance: none;
+        }
+        &-input {
+            border: 2px solid @color-one;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-family: inherit;
+            font-size: 20px;
+            outline: none;
+            padding: 15px 10px;
+            text-transform: capitalize;
+            width: 100%;
+        }
+        &-label {
+            color: @color-six;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        &-image {
+            width: 250px;
+
+            .image {
+                width: 100%;
+            }
+        }
+        &-button {
+            background: @color-one;
+            border: 2px solid @color-one;
+            border-radius: 10px;
+            color: @color-two;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 15px;
+            outline: none;
+            padding: 15px;
+            width: 100%;
+            text-transform: uppercase;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+        &-button--cancel {
+            background: @color-two;
+            color: @color-one;
+            margin-top: 20px;
+        }
+    }
+    .notifications {
+        border: 1px solid;
+        border-radius: 5px;
+        box-sizing: border-box;
+        color: @color-two;
+        display: none;
+        font-weight: bold;
+        margin: 15px auto 0;
+        padding: 5px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        text-align: center;
+        width: 90%;
+
+        &-error {
+            background-color: @color-five;
+            display: block;
+        }
+        &-success {
+            background-color: @color-four;
+            display: block;
+        }
+
+        @media (max-width: @breakpoint-md) {
+            top: inherit;
+            bottom: 155px;
+        }
+    }
+
+    .list-dogs {
+        display: flex;
+        flex-direction: column;
+        height: 55vh;
+        overflow: auto;
+        
+        &-item {
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-align: center;
+            align-items: center;
+            margin-right: 20px;
+            position: relative;
+            transition: all linear .2s;
+            cursor: pointer;
+        }
+        &--demo {
+            display: none;
+        }
+        &-figure {
+            display: block;
+            margin: 0;
+            position: relative;
+            width: 90px;
+        }
+        &-img {
+            width: 100%;
+        }
+        &-col {
+            color: @color-seven;
+            padding: 10px 20px;
+            position: relative;
+        }
+        &-name {
+            text-transform: capitalize;
+            font-size: 20px;
+            width: 100%;
+            display: block;
+        }
+        &-breed {
+            text-transform: capitalize;
+            font-size: 16px;
+            width: 100%;
+            display: block;
+        }
+        &-date {
+            font-size: 14px;
+        }
+    }
+    
+    @media (max-width: @breakpoint-md) {
+        flex-direction: column;
+        margin-top: 110px;
+        padding: 0;
+
+        &-left {
+            width: 100%;
+        }
+        &-right {
+            background: @color-three;
+            height: ~"calc(100vh - 110px)";
+            padding: 30px;
+            position: fixed !important;
+            left: -100%;
+        }
+        .section {
+            border: 0;
+            border-radius: 0;
+            box-shadow: none;
+            width: 100%;
+        }
+        .form {
+            flex-direction: column-reverse;
+            margin: 20px auto 0;
+
+            &-content {
+                width: 100%;
+            }
+            &-image {
+                margin: 20px auto 5px;
+                width: 200px;
+            }
+        }
+    }
+}

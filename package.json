@@ -1,0 +1,28 @@
+{
+  "name": "Dog-breeds",
+  "version": "1.0.0",
+  "description": "Dog-breeds app",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp"
+  },
+  "author": "Tobias Rocha da Rosa",
+  "license": "ISC",
+  "dependencies": {
+    "babel-core": "^6.26.3",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "browser-sync": "^2.24.4",
+    "global": "^4.3.2",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.1",
+    "gulp-cached": "^1.1.1",
+    "gulp-cli": "^2.0.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-deps-order": "^0.2.1",
+    "gulp-file-include": "^2.0.1",
+    "gulp-less": "^3.5.0",
+    "gulp-watch": "^5.0.0",
+    "npm": "^6.1.0",
+    "run-sequence": "^2.2.1"
+  }
+}

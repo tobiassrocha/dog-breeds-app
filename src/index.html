@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="NOINDEX, NOFOLLOW">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Dog Breeds APP</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="./css/bundle.css">
+    <!-- CDN google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700&amp;display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        @@include( 'content-header.html' )
+    </header>
+    
+    <!-- CONTENT -->
+    <div class="content">
+        @@include( 'content.html' )
+    </div>
+
+    <!-- REQUIRE JS-->
+    <script type="text/javascript" src="plugins/require/require.js"></script>
+    <script type="text/javascript" src="js/require-config.js"></script>
+    <script type="text/javascript">
+        require(
+            ['jquery', 'app'],
+
+            function ($, app) {
+                app.onLoad();
+            }
+        );
+    </script>
+
+</body>
+
+</html>

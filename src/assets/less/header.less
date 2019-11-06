@@ -1,0 +1,188 @@
+@import "variables.less";
+
+/* HEADER ///////////////////////////////////////////////// */
+
+.header {
+    padding: 20px 50px;
+    background: @color-one;
+
+    &-content {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;;
+    }
+    &-content--logo {
+        width: 365px;
+
+        .logo {
+            color: @color-two;
+            display: flex;
+            align-items: center;
+            width: 365px;
+            justify-content: space-between;
+
+            &-figure {
+                margin: 0;
+                width: 100px;
+                height: 100px;
+            }
+            &-img {
+                width: 100%;
+            }
+        }
+    }
+    &-content--right {
+
+        .button {
+            background: @color-one;
+            border: 2px solid @color-two;
+            border-radius: 50px;
+            padding: 25px;
+            width: 200px;
+            color: @color-two;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 15px;
+            outline: none;
+
+            &-mobile {
+                display: none;
+            }
+            &:hover {
+                background: @color-two;
+                color: @color-one;
+                cursor: pointer;
+            }
+        }
+    }
+    &-content--left {
+        display: none;
+
+        .menu {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: flex-end;
+            width: 60px;
+            height: 60px;
+
+            &-text {
+                color: @color-two;
+                margin-top: 15px;
+            }
+            .close {
+                display: none;
+            }
+        }
+        .menu.open {
+            .hamburguer {
+                display: none;
+            }
+            .close {
+                display: block;
+            }
+        }
+        .hamburguer {
+            background: @color-two;
+            display: block;
+            position: relative;
+            width: 40px;
+            height: 5px;
+        }
+        .hamburguer:before, .hamburguer:after {
+            background: @color-two;
+            content: '';
+            display: block;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            transition: .5s ease-in-out;
+        }
+        .hamburguer:before {
+            top: -10px;
+        }
+        .hamburguer:after {
+            bottom: -10px;
+        }
+        .close {
+            position: absolute;
+            left: 32px;
+            top: 32px;
+            width: 32px;
+            height: 32px;
+        }
+        .close:before, .close:after {
+            background-color: @color-two;
+            left: 15px;
+            content: ' ';
+            position: absolute;
+            width: 4px;
+            height: 33px;
+        }
+        .close:before {
+            transform: rotate(45deg);
+        }
+        .close:after {
+            transform: rotate(-45deg);
+        }
+    }
+
+    @media (max-width: @breakpoint-md) {
+        
+        padding: 5px 20px;
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        z-index: 1;
+
+        &-content {
+            flex-direction: row;
+        }
+        &-content--logo {
+            width: 100px;
+
+            .logo {
+                width: 100%;
+
+                &-text {
+                    display: none;
+                }
+            }
+        }
+        &-content--left {
+            display: block;
+            width: 90px;
+        }
+        &-content--right {
+            margin-top: 10px;
+            width: 90px;
+
+            .button {
+                display: none;
+
+                &-mobile {
+                    background: none;
+                    border: none;
+                    color: @color-two;
+                    cursor: pointer;
+                    display: flex;
+                    font-size: 13px;
+                    align-items: center;
+                    flex-direction: column;
+                    line-height: 30px;
+                    outline: none;
+                    position: relative;
+                    
+                    &:before {
+                        content: "+";
+                        font-size: 60px;
+                    }
+                }
+            }
+        }
+    }
+}

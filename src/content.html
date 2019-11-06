@@ -1,0 +1,63 @@
+<section class="section content-left">
+    <form class="form">
+        <div class="form-content">
+                <div class="form-group">
+                    <label class="form-label">Select your dog breed:</label>
+                    <i class="icon-arrow"></i>
+                    <select class="form-select js-select-breed">
+                        <option value="default" selected="" hidden=""></option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Name dog:</label>
+                    <input class="form-input js-input-name" type="text">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Select your favorite font:</label>
+                    <i class="icon-arrow"></i>
+                    <select class="form-select js-select-fonts">
+                        <option value="default" selected="" hidden=""></option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Select dog name color:</label>
+                    <i class="icon-arrow"></i>
+                    <select class="form-select js-select-color">
+                        <option value="default" selected="" hidden=""></option>
+                        <option value="#f00">Red</option>
+                        <option value="#f50">Orange</option>
+                        <option value="#0000FF">Blue</option>
+                        <option value="#551A8B">Purple</option>
+                        <option value="#00FF00">Green</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <button type="button" class="form-button js-save-form">Save dog</button>
+                    <button type="button" class="form-button form-button--cancel js-reset-form">Cancel</button>
+                </div>
+        </div>
+        <div class="form-group">
+            <figure class="form-image">
+                <img class="image js-image-dog" src="./images/dog-image.jpg">
+            </figure>
+            <h3 class="form-title js-title-dog">Dog name</h3>
+        </div>
+    </form>
+    <div class="notifications js-notifications">notifications</div>
+</section>
+<section class="section content-right">
+    <h2 class="content-right-title">My dogs</h2>
+    <p class="msg-dogs-empty js-local-empty">List dogs empty!</p>
+    <ul class="list-dogs">
+        <li class="list-dogs-item list-dogs--demo">
+                <figure class="list-dogs-figure">
+                    <img class="list-dogs-img" src="{dog-image}" alt="{dog-breed}">
+                </figure>
+                <div class="list-dogs-col">
+                        <span class="list-dogs-name">{dog-name}</span>
+                        <span class="list-dogs-breed">{dog-breed}</span>
+                        <span class="list-dogs-date">{dog-date}</span>
+                </div>
+        </li>
+    </ul>   
+</section>
