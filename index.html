@@ -1,4 +1,45 @@
-<section class="section content-left">
+<!DOCTYPE html>
+<html lang="br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="NOINDEX, NOFOLLOW">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Dog Breeds APP</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="./css/bundle.css">
+    <!-- CDN google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700&amp;display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header-content">
+    <div class="header-content--left">
+        <nav class="menu js-list-dogs">
+            <div class="hamburguer"></div>
+            <div class="close"></div>
+            <span class="menu-text">Dogs</span>
+        </nav>
+    </div>
+    <div class="header-content--logo">
+        <h1 class="logo">
+            <figure class="logo-figure">
+                <img class="logo-img" src="./images/logo.png" alt="">
+            </figure>
+            <span class="logo-text">Dog Breeds App</span>
+        </h1>
+    </div>
+    <div class="header-content--right">
+        <button type="button" class="button js-reset-form">Add new dog</button>
+        <button type="button" class="button-mobile js-reset-form">Add new dog</button>
+    </div>
+</div>
+    </header>
+    
+    <!-- CONTENT -->
+    <div class="content">
+        <section class="section content-left">
     <form class="form">
         <div class="form-content">
                 <div class="form-group">
@@ -61,3 +102,21 @@
         </li>
     </ul>   
 </section>
+    </div>
+
+    <!-- REQUIRE JS-->
+    <script type="text/javascript" src="plugins/require/require.js"></script>
+    <script type="text/javascript" src="js/require-config.js"></script>
+    <script type="text/javascript">
+        require(
+            ['jquery', 'app'],
+
+            function ($, app) {
+                app.onLoad();
+            }
+        );
+    </script>
+
+</body>
+
+</html>

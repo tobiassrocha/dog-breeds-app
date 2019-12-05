@@ -1,0 +1,458 @@
+/******************************************************************************
+ * !!! Breakpoints !!!
+ *****************************************************************************/
+/******************************************************************************
+ * !!! Colors !!!
+ *****************************************************************************/
+/******************************************************************************
+ * !!! Typography !!!
+ *****************************************************************************/
+/* CONTENT ///////////////////////////////////////////////// */
+.content {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px;
+}
+.content-left {
+  position: relative;
+  width: 65%;
+}
+.content-right {
+  box-sizing: border-box;
+  padding: 60px 20px 0 60px;
+  width: 30%;
+}
+.content-right-title {
+  border-bottom: 2px solid;
+  color: #a7a7a7;
+  font-size: 20px;
+  font-weight: normal;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+}
+.content .section {
+  background: #ffffff;
+  border: 1px solid #a7a7a7;
+  -webkit-box-shadow: 0px 0px 10px 0px #f2f2f2;
+  -moz-box-shadow: 0px 0px 10px 0px #f2f2f2;
+  box-shadow: 0px 0px 5px 0px #a7a7a7;
+  border-radius: 10px;
+}
+.content .form {
+  display: flex;
+  justify-content: space-between;
+  margin: 60px auto 0;
+  width: 90%;
+}
+.content .form-title {
+  font-size: 25px;
+  text-align: center;
+}
+.content .form-content {
+  width: 50%;
+}
+.content .form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+  position: relative;
+}
+.content .form-group .icon-arrow {
+  background-image: url(../images/arrow-down.png);
+  background-size: 100%;
+  position: absolute;
+  bottom: 18px;
+  right: 20px;
+  width: 20px;
+  height: 20px;
+}
+.content .form-select {
+  background: transparent;
+  border: 2px solid #7e82d4;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-family: inherit;
+  font-size: 20px;
+  outline: none;
+  padding: 15px 10px;
+  text-transform: capitalize;
+  width: 100%;
+  -webkit-appearance: none;
+}
+.content .form-input {
+  border: 2px solid #7e82d4;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-family: inherit;
+  font-size: 20px;
+  outline: none;
+  padding: 15px 10px;
+  text-transform: capitalize;
+  width: 100%;
+}
+.content .form-label {
+  color: #a7a7a7;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.content .form-image {
+  width: 250px;
+}
+.content .form-image .image {
+  width: 100%;
+}
+.content .form-button {
+  background: #7e82d4;
+  border: 2px solid #7e82d4;
+  border-radius: 10px;
+  color: #ffffff;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 15px;
+  outline: none;
+  padding: 15px;
+  width: 100%;
+  text-transform: uppercase;
+}
+.content .form-button:hover {
+  text-decoration: underline;
+}
+.content .form-button--cancel {
+  background: #ffffff;
+  color: #7e82d4;
+  margin-top: 20px;
+}
+.content .notifications {
+  border: 1px solid;
+  border-radius: 5px;
+  box-sizing: border-box;
+  color: #ffffff;
+  display: none;
+  font-weight: bold;
+  margin: 15px auto 0;
+  padding: 5px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  width: 90%;
+}
+.content .notifications-error {
+  background-color: #f00000;
+  display: block;
+}
+.content .notifications-success {
+  background-color: #05bd05;
+  display: block;
+}
+@media (max-width: 1024px) {
+  .content .notifications {
+    top: inherit;
+    bottom: 155px;
+  }
+}
+.content .list-dogs {
+  display: flex;
+  flex-direction: column;
+  height: 55vh;
+  overflow: auto;
+}
+.content .list-dogs-item {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-right: 20px;
+  position: relative;
+  transition: all linear .2s;
+  cursor: pointer;
+}
+.content .list-dogs--demo {
+  display: none;
+}
+.content .list-dogs-figure {
+  display: block;
+  margin: 0;
+  position: relative;
+  width: 90px;
+}
+.content .list-dogs-img {
+  width: 100%;
+}
+.content .list-dogs-col {
+  color: #000000;
+  padding: 10px 20px;
+  position: relative;
+}
+.content .list-dogs-name {
+  text-transform: capitalize;
+  font-size: 20px;
+  width: 100%;
+  display: block;
+}
+.content .list-dogs-breed {
+  text-transform: capitalize;
+  font-size: 16px;
+  width: 100%;
+  display: block;
+}
+.content .list-dogs-date {
+  font-size: 14px;
+}
+@media (max-width: 1024px) {
+  .content {
+    flex-direction: column;
+    margin-top: 110px;
+    padding: 0;
+  }
+  .content-left {
+    width: 100%;
+  }
+  .content-right {
+    background: #f2f2f2;
+    height: calc(100vh - 110px);
+    padding: 30px;
+    position: fixed !important;
+    left: -100%;
+  }
+  .content .section {
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    width: 100%;
+  }
+  .content .form {
+    flex-direction: column-reverse;
+    margin: 20px auto 0;
+  }
+  .content .form-content {
+    width: 100%;
+  }
+  .content .form-image {
+    margin: 20px auto 5px;
+    width: 200px;
+  }
+}
+
+/******************************************************************************
+ * !!! Breakpoints !!!
+ *****************************************************************************/
+/******************************************************************************
+ * !!! Colors !!!
+ *****************************************************************************/
+/******************************************************************************
+ * !!! Typography !!!
+ *****************************************************************************/
+/* HEADER ///////////////////////////////////////////////// */
+.header {
+  padding: 20px 50px;
+  background: #7e82d4;
+}
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+}
+.header-content--logo {
+  width: 365px;
+}
+.header-content--logo .logo {
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  width: 365px;
+  justify-content: space-between;
+}
+.header-content--logo .logo-figure {
+  margin: 0;
+  width: 100px;
+  height: 100px;
+}
+.header-content--logo .logo-img {
+  width: 100%;
+}
+.header-content--right .button {
+  background: #7e82d4;
+  border: 2px solid #ffffff;
+  border-radius: 50px;
+  padding: 25px;
+  width: 200px;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 15px;
+  outline: none;
+}
+.header-content--right .button-mobile {
+  display: none;
+}
+.header-content--right .button:hover {
+  background: #ffffff;
+  color: #7e82d4;
+  cursor: pointer;
+}
+.header-content--left {
+  display: none;
+}
+.header-content--left .menu {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 60px;
+  height: 60px;
+}
+.header-content--left .menu-text {
+  color: #ffffff;
+  margin-top: 15px;
+}
+.header-content--left .menu .close {
+  display: none;
+}
+.header-content--left .menu.open .hamburguer {
+  display: none;
+}
+.header-content--left .menu.open .close {
+  display: block;
+}
+.header-content--left .hamburguer {
+  background: #ffffff;
+  display: block;
+  position: relative;
+  width: 40px;
+  height: 5px;
+}
+.header-content--left .hamburguer:before,
+.header-content--left .hamburguer:after {
+  background: #ffffff;
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transition: 0.5s ease-in-out;
+}
+.header-content--left .hamburguer:before {
+  top: -10px;
+}
+.header-content--left .hamburguer:after {
+  bottom: -10px;
+}
+.header-content--left .close {
+  position: absolute;
+  left: 32px;
+  top: 32px;
+  width: 32px;
+  height: 32px;
+}
+.header-content--left .close:before,
+.header-content--left .close:after {
+  background-color: #ffffff;
+  left: 15px;
+  content: ' ';
+  position: absolute;
+  width: 4px;
+  height: 33px;
+}
+.header-content--left .close:before {
+  transform: rotate(45deg);
+}
+.header-content--left .close:after {
+  transform: rotate(-45deg);
+}
+@media (max-width: 1024px) {
+  .header {
+    padding: 5px 20px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 1;
+  }
+  .header-content {
+    flex-direction: row;
+  }
+  .header-content--logo {
+    width: 100px;
+  }
+  .header-content--logo .logo {
+    width: 100%;
+  }
+  .header-content--logo .logo-text {
+    display: none;
+  }
+  .header-content--left {
+    display: block;
+    width: 90px;
+  }
+  .header-content--right {
+    margin-top: 10px;
+    width: 90px;
+  }
+  .header-content--right .button {
+    display: none;
+  }
+  .header-content--right .button-mobile {
+    background: none;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    display: flex;
+    font-size: 13px;
+    align-items: center;
+    flex-direction: column;
+    line-height: 30px;
+    outline: none;
+    position: relative;
+  }
+  .header-content--right .button-mobile:before {
+    content: "+";
+    font-size: 60px;
+  }
+}
+
+/******************************************************************************
+ * !!! Breakpoints !!!
+ *****************************************************************************/
+/******************************************************************************
+ * !!! Colors !!!
+ *****************************************************************************/
+/******************************************************************************
+ * !!! Typography !!!
+ *****************************************************************************/
+body,
+html {
+  background: #f2f2f2;
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+label {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+/******************************************************************************
+ * !!! Breakpoints !!!
+ *****************************************************************************/
+/******************************************************************************
+ * !!! Colors !!!
+ *****************************************************************************/
+/******************************************************************************
+ * !!! Typography !!!
+ *****************************************************************************/
